@@ -1,0 +1,4 @@
+// Check data from multiple table at once
+SELECT t1.modelName, t2.catalog_name, t3.matrix_name, t4.RoadMap_Name
+FROM graphs.files t1, graphs.catalog_files t2 , graphs.matrix_files t3 , graphs.roadmap t4 
+WHERE t1.modelName = 'same' AND t2.catalog_name = 'same' AND t3.matrix_name = 'same' AND t4.RoadMap_Name = 'same';
