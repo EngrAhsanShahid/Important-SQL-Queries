@@ -2,3 +2,9 @@
 SELECT t1.modelName, t2.catalog_name, t3.matrix_name, t4.RoadMap_Name
 FROM graphs.files t1, graphs.catalog_files t2 , graphs.matrix_files t3 , graphs.roadmap t4 
 WHERE t1.modelName = 'same' AND t2.catalog_name = 'same' AND t3.matrix_name = 'same' AND t4.RoadMap_Name = 'same';
+
+// Load a file into mysql
+LOAD DATA INFILE 'C:/Users/DELL/organizational_tabs.sql'
+INTO TABLE graphs.organizational_tabs
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
