@@ -8,3 +8,9 @@ LOAD DATA INFILE 'C:/Users/DELL/organizational_tabs.sql'
 INTO TABLE graphs.organizational_tabs
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
+
+
+// Get All table names from the database
+SELECT TABLE_NAME 
+FROM INFORMATION_SCHEMA.TABLES
+WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_SCHEMA='graphs';
